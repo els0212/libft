@@ -1,6 +1,6 @@
 #include "libft.h"
 
-void	*ft_dst_gt_src(unsigned char *dst, const unsigned char *src, size_t len)
+void	*ft_dst_lt_src(unsigned char *dst, const unsigned char *src, size_t len)
 {
 	size_t	st;
 
@@ -13,14 +13,14 @@ void	*ft_dst_gt_src(unsigned char *dst, const unsigned char *src, size_t len)
 	return (dst);
 }
 
-void	*ft_dst_lt_src(unsigned char *dst, const unsigned char *src, size_t len)
+void	*ft_dst_gt_src(unsigned char *dst, const unsigned char *src, size_t len)
 {
 	size_t	st;
 
-	st = len - 1;
+	st = len;
 	while (st > 0)
 	{
-		dst[st] = src[st];
+		dst[st - 1] = src[st - 1];
 		st--;
 	}
 	return (dst);

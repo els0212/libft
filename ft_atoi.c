@@ -1,3 +1,5 @@
+#include "libft.h"
+
 unsigned int	ft_make_int(const char *ptr, int st, int ed)
 {
 	unsigned int	ret;
