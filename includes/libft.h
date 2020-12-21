@@ -1,9 +1,20 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   libft.h                                            :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: hyi <hyi@student.42seoul.kr>               +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2020/12/21 11:11:51 by hyi               #+#    #+#             */
+/*   Updated: 2020/12/21 11:11:54 by hyi              ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #ifndef LIBFT_H
 # define LIBFT_H
-
-#include "stddef.h"
-#include <stdlib.h>
-#include <unistd.h>
+# include "stddef.h"
+# include <stdlib.h>
+# include <unistd.h>
 
 unsigned int	ft_make_int(const char *ptr, int st, int ed);
 int				ft_atoi(const char *nptr);
@@ -40,4 +51,6 @@ void			ft_putchar_fd(char c, int fd);
 void			ft_putstr_fd(char *s, int fd);
 void			ft_putendl_fd(char *s, int fd);
 void			ft_putnbr_fd(int n, int fd);
+int				ft_cnt_lines(const char *s, char c);
+int				ft_next_idx(const char *s, char c, int st);
 #endif

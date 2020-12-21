@@ -1,7 +1,16 @@
-#include "libft.h"
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strnstr.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: hyi <hyi@student.42seoul.kr>               +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2020/12/21 10:50:30 by hyi               #+#    #+#             */
+/*   Updated: 2020/12/21 10:56:51 by hyi              ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-int		ft_strncmp(const char *s1, const char *s2, size_t len);
-size_t	ft_strlen(const char *s);
+#include "libft.h"
 
 char	*ft_strnstr(const char *big, const char *little, size_t len)
 {

@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_atoi.c                                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: hyi <hyi@student.42seoul.kr>               +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2020/12/21 10:52:24 by hyi               #+#    #+#             */
+/*   Updated: 2020/12/21 10:52:24 by hyi              ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 
 unsigned int	ft_make_int(const char *ptr, int st, int ed)
@@ -32,7 +44,7 @@ int				ft_atoi(const char *nptr)
 		sign = -1;
 	if (sign == -1 || nptr[st] == '+')
 		st++;
-	if(nptr[st] < '0' || nptr[st] > '9')
+	if (nptr[st] < '0' || nptr[st] > '9')
 		return (0);
 	ed = st;
 	while (nptr[ed] >= '0' && nptr[ed] <= '9')

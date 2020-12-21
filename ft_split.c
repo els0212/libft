@@ -1,6 +1,16 @@
-#include "libft.h"
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_split.c                                         :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: hyi <hyi@student.42seoul.kr>               +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2020/12/21 10:59:43 by hyi               #+#    #+#             */
+/*   Updated: 2020/12/21 11:10:12 by hyi              ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-char	*ft_substr(const char *s, unsigned int start, size_t len);
+#include "libft.h"
 
 int		ft_next_idx(const char *s, char c, int st)
 {
@@ -11,7 +21,6 @@ int		ft_next_idx(const char *s, char c, int st)
 
 int		ft_cnt_lines(const char *s, char c)
 {
-
 	int	st;
 	int	cnt;
 

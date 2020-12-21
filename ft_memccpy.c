@@ -6,7 +6,7 @@
 /*   By: hyi <hyi@student.42seoul.kr>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/20 01:05:49 by hyi               #+#    #+#             */
-/*   Updated: 2020/12/20 01:05:50 by hyi              ###   ########.fr       */
+/*   Updated: 2020/12/21 10:42:56 by hyi              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ void	*ft_memccpy(void *dst, const void *src, int c, size_t len)
 	st = 0;
 	dst_uc = (unsigned char *)dst;
 	src_uc = (const unsigned char *)src;
-	while(st < len)
+	while (st < len)
 	{
 		dst_uc[st] = src_uc[st];
 		if (dst_uc[st] == (unsigned char)c)

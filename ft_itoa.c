@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_itoa.c                                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: hyi <hyi@student.42seoul.kr>               +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2020/12/21 10:42:22 by hyi               #+#    #+#             */
+/*   Updated: 2020/12/21 10:42:24 by hyi              ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 #define DIVISOR 10
 
@@ -18,8 +30,8 @@ char	*ft_rev_str(char *n, int size)
 
 char	*ft_conv_int_to_char(unsigned int n, int sign)
 {
-	int		st;
-	char	n_char[11];
+	int					st;
+	char				n_char[11];
 	unsigned int		div;
 
 	st = 0;
@@ -36,7 +48,7 @@ char	*ft_conv_int_to_char(unsigned int n, int sign)
 
 char	*ft_itoa(int n)
 {
-	int				sign;
+	int	sign;
 
 	sign = n < 0 ? -1 : 1;
 	return (ft_conv_int_to_char((unsigned int)(n * sign), sign));

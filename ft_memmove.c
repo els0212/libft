@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_memmove.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: hyi <hyi@student.42seoul.kr>               +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2020/12/21 10:44:43 by hyi               #+#    #+#             */
+/*   Updated: 2020/12/21 10:44:45 by hyi              ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 
 void	*ft_dst_lt_src(unsigned char *dst, const unsigned char *src, size_t len)
@@ -26,7 +38,7 @@ void	*ft_dst_gt_src(unsigned char *dst, const unsigned char *src, size_t len)
 	return (dst);
 }
 
-void 	*ft_memmove(void *dst, const void *src, size_t len)
+void	*ft_memmove(void *dst, const void *src, size_t len)
 {
 	unsigned char		*dst_uc;
 	const unsigned char	*src_uc;
