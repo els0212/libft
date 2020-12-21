@@ -6,7 +6,7 @@
 /*   By: hyi <hyi@student.42seoul.kr>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/21 10:50:52 by hyi               #+#    #+#             */
-/*   Updated: 2020/12/21 10:57:00 by hyi              ###   ########.fr       */
+/*   Updated: 2020/12/21 19:26:09 by hyi              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,8 +49,11 @@ char	*ft_strtrim(const char *s1, const char *set)
 		if (st >= ed)
 			return (ft_calloc(1, sizeof(char)));
 		else
-			ret = (char *)malloc(sizeof(char) * (ed - st + 2));
-		ft_strlcpy(ret, &s1[st], ed - st + 2);
+		{
+			if (!(ret = (char *)malloc(sizeof(char) * (ed - st + 2))))
+				return (0);
+			ft_strlcpy(ret, &s1[st], ed - st + 2);
+		}
 	}
 	return (ret);
 }

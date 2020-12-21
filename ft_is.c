@@ -6,28 +6,22 @@
 /*   By: hyi <hyi@student.42seoul.kr>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/21 10:41:33 by hyi               #+#    #+#             */
-/*   Updated: 2020/12/21 10:41:35 by hyi              ###   ########.fr       */
+/*   Updated: 2020/12/21 17:48:38 by hyi              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int	ft_isalpha(int c)
 {
-	unsigned char	ch;
-
-	ch = (unsigned char)c;
-	if (ch >= 'a' && ch <= 'z')
+	if (c >= 0x61 && c <= 0x7A)
 		return (1);
-	else if (ch >= 'A' && ch <= 'Z')
+	else if (c >= 0x41 && c <= 0x5A)
 		return (1);
 	return (0);
 }
 
 int	ft_isdigit(int c)
 {
-	unsigned char	ch;
-
-	ch = (unsigned char)c;
-	if (ch >= '0' && ch <= '9')
+	if (c >= 0x30 && c <= 0x39)
 		return (1);
 	return (0);
 }

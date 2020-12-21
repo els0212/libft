@@ -6,7 +6,7 @@
 /*   By: hyi <hyi@student.42seoul.kr>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/21 11:11:51 by hyi               #+#    #+#             */
-/*   Updated: 2020/12/21 11:11:54 by hyi              ###   ########.fr       */
+/*   Updated: 2020/12/21 18:38:43 by hyi              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,8 +16,7 @@
 # include <stdlib.h>
 # include <unistd.h>
 
-unsigned int	ft_make_int(const char *ptr, int st, int ed);
-int				ft_atoi(const char *nptr);
+long			ft_atoi(const char *nptr);
 int				ft_isalpha(int c);
 int				ft_isdigit(int c);
 int				ft_isalnum(int c);

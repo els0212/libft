@@ -6,7 +6,7 @@
 /*   By: hyi <hyi@student.42seoul.kr>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/21 10:59:43 by hyi               #+#    #+#             */
-/*   Updated: 2020/12/21 11:10:12 by hyi              ###   ########.fr       */
+/*   Updated: 2020/12/21 19:24:54 by hyi              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,7 +46,8 @@ char	**ft_split(const char *s, char c)
 
 	if (!s || !c)
 		return (0);
-	ret = (char **)malloc(sizeof(char *) * (ft_cnt_lines(s, c) + 1));
+	if (!(ret = (char **)malloc(sizeof(char *) * (ft_cnt_lines(s, c) + 1))))
+		return (0);
 	ret_st = 0;
 	st = 0;
 	while (s[st] && s[st] == c)
@@ -58,6 +59,6 @@ char	**ft_split(const char *s, char c)
 		while (s[st] && s[st] == c)
 			st++;
 	}
-	ret[ret_st] = '\0';
+	ret[ret_st] = 0;
 	return (ret);
 }
