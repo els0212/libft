@@ -6,7 +6,7 @@
 /*   By: hyi <hyi@student.42seoul.kr>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/21 10:51:12 by hyi               #+#    #+#             */
-/*   Updated: 2020/12/21 18:03:14 by hyi              ###   ########.fr       */
+/*   Updated: 2020/12/24 16:57:35 by hyi              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,5 @@ int	ft_toupper(int c)
 {
 	if (c >= 0x61 && c <= 0x7A)
 		return (c - 0x20);
-	return (c);
-}
-
-int	ft_tolower(int c)
-{
-	if (c >= 0x41 && c <= 0x5A)
-		return (c + 0x20);
 	return (c);
 }

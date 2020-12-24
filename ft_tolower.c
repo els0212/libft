@@ -1,29 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   ft_tolower.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hyi <hyi@student.42seoul.kr>               +#+  +:+       +#+        */
+/*   By: hyi </var/mail/hyi>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/12/21 10:47:04 by hyi               #+#    #+#             */
-/*   Updated: 2020/12/24 17:00:12 by hyi              ###   ########.fr       */
+/*   Created: 2020/12/24 16:58:10 by hyi               #+#    #+#             */
+/*   Updated: 2020/12/24 16:58:12 by hyi              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-
-const char	*ft_strchr(const char *s, int c)
+int	ft_tolower(int c)
 {
-	int	st;
-
-	st = 0;
-	while (*(s + st))
-	{
-		if (*(s + st) == (char)c)
-			return (s + st);
-		st++;
-	}
-	if (c == '\0')
-		return (s + st);
-	return (0);
+	if (c >= 0x41 && c <= 0x5A)
+		return (c + 0x20);
+	return (c);
 }

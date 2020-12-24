@@ -6,7 +6,7 @@
 /*   By: hyi <hyi@student.42seoul.kr>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/21 10:44:07 by hyi               #+#    #+#             */
-/*   Updated: 2020/12/21 18:01:49 by hyi              ###   ########.fr       */
+/*   Updated: 2020/12/24 00:53:53 by hyi              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,8 @@ void	*ft_memcpy(void *dst, const void *src, size_t len)
 	st = 0;
 	dst_uc = (unsigned char *)dst;
 	src_uc = (const unsigned char *)src;
+	if (!dst && !src)
+		return (0);
 	while (st < len)
 	{
 		dst_uc[st] = src_uc[st];

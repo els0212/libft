@@ -6,7 +6,7 @@
 /*   By: hyi <hyi@student.42seoul.kr>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/21 10:48:11 by hyi               #+#    #+#             */
-/*   Updated: 2020/12/21 10:56:21 by hyi              ###   ########.fr       */
+/*   Updated: 2020/12/24 02:17:58 by hyi              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,8 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size)
 		dst[dst_st + st] = src[st];
 		st++;
 	}
-	dst[dst_st + st] = '\0';
+	if (dst_st + st < size)
+		dst[dst_st + st] = '\0';
 	if (dst_st < size)
 		return (dst_st + src_len);
 	return (size + src_len);

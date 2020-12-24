@@ -6,7 +6,7 @@
 /*   By: hyi <hyi@student.42seoul.kr>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/21 10:50:30 by hyi               #+#    #+#             */
-/*   Updated: 2020/12/21 19:25:12 by hyi              ###   ########.fr       */
+/*   Updated: 2020/12/24 02:22:53 by hyi              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,20 +19,20 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 
 	st = 0;
 	lt_len = ft_strlen(little);
-	if (little[0] == '\0' || lt_len == 0)
+	if (little[0] == '\0')
 		return ((char *)big);
-	else if (lt_len <= len)
+	else if (!big)
+		if (big[st])
+			;
+	while (st + lt_len <= len)
 	{
-		while (big[st] && st + lt_len <= len)
-		{
-			while (big[st] && big[st] != little[0])
-				st++;
-			if (!big[st] || st + lt_len > len)
-				break ;
-			if (!ft_strncmp(&big[st], little, lt_len))
-				return (&((char *)big)[st]);
+		while (big[st] && big[st] != little[0])
 			st++;
-		}
+		if (!big[st] || st + lt_len > len)
+			break ;
+		if (!ft_strncmp(&big[st], little, lt_len))
+			return (&((char *)big)[st]);
+		st++;
 	}
 	return (0);
 }

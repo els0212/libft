@@ -6,7 +6,7 @@
 /*   By: hyi <hyi@student.42seoul.kr>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/21 10:42:22 by hyi               #+#    #+#             */
-/*   Updated: 2020/12/21 19:28:30 by hyi              ###   ########.fr       */
+/*   Updated: 2020/12/24 01:00:20 by hyi              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ char	*ft_rev_str(char *n, int size)
 
 	st = size - 1;
 	ret_st = 0;
-	if (!(ret = (char *)malloc(sizeof(int) * (size + 1))))
+	if (!(ret = (char *)malloc(sizeof(char) * (size + 1))))
 		return (0);
 	while (st >= 0)
 		ret[ret_st++] = n[st--];

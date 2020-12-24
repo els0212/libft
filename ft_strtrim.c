@@ -6,7 +6,7 @@
 /*   By: hyi <hyi@student.42seoul.kr>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/21 10:50:52 by hyi               #+#    #+#             */
-/*   Updated: 2020/12/21 19:26:09 by hyi              ###   ########.fr       */
+/*   Updated: 2020/12/24 02:25:40 by hyi              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,9 +39,11 @@ char	*ft_strtrim(const char *s1, const char *set)
 	int		st;
 	int		ed;
 
+	if (!s1 || !set)
+		return (0);
 	st = ft_get_st(s1, set, 0, 1);
 	ed = ft_strlen(s1);
-	if (ed == 0)
+	if (!s1[st] || ed == 0)
 		return (ft_calloc(1, sizeof(char)));
 	else
 	{
