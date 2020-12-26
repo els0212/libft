@@ -6,7 +6,7 @@
 /*   By: hyi <hyi@student.42seoul.kr>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/21 10:59:43 by hyi               #+#    #+#             */
-/*   Updated: 2020/12/21 19:24:54 by hyi              ###   ########.fr       */
+/*   Updated: 2020/12/26 20:36:22 by hyi              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,7 +44,7 @@ char	**ft_split(const char *s, char c)
 	int		ret_st;
 	int		st;
 
-	if (!s || !c)
+	if (!s)
 		return (0);
 	if (!(ret = (char **)malloc(sizeof(char *) * (ft_cnt_lines(s, c) + 1))))
 		return (0);
@@ -52,7 +52,7 @@ char	**ft_split(const char *s, char c)
 	st = 0;
 	while (s[st] && s[st] == c)
 		st++;
-	while (ret_st < ft_cnt_lines(s, c))
+	while (s[st] && ret_st < ft_cnt_lines(s, c))
 	{
 		ret[ret_st++] = ft_substr(s, st, ft_next_idx(s, c, st) - st);
 		st = ft_next_idx(s, c, st);
