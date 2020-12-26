@@ -10,14 +10,14 @@ CFLAGS = -Wall -Wextra -Werror
 
 all : $(NAME)
 
-.c.o : ${SRCS} ${SRCS_BONUS}
+.c.o : ${SRCS}
 	${CC} ${CFLAGS} -c $< -o $@
 
-$(NAME) : ${OBJS} ${OBJS_BONUS}
-	${AR} ${ARFLAGS} $(NAME) ${OBJS} ${OBJS_BONUS}
+$(NAME) : ${OBJS}
+	${AR} ${ARFLAGS} $(NAME) ${OBJS}
 
-BONUS : ${OBJS_BONUS}
-	${AR} ${ARFLAGS} ${NAME} ${OBJS_BONUS}
+bonus : ${OBJS_BONUS}
+	${AR} ${ARFLAGS} $(NAME) ${OBJS_BONUS}
 
 clean :
 	rm -rf ${OBJS} ${OBJS_BONUS}
