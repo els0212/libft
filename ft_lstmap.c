@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lstmap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hyi <hyi@student.42seoul.kr>               +#+  +:+       +#+        */
+/*   By: hyi <marvin@42.fr>                         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/12/26 21:28:32 by hyi               #+#    #+#             */
-/*   Updated: 2020/12/26 21:28:33 by hyi              ###   ########.fr       */
+/*   Created: 2020/12/26 21:53:40 by hyi               #+#    #+#             */
+/*   Updated: 2020/12/26 21:55:10 by hyi              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,13 +19,17 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 	t_list	*curr;
 
 	if (!lst || !f)
-		return (0);
+		return (NULL);
 	curr = lst;
 	root = 0;
 	while (curr)
 	{
 		if (!(new_node = ft_lstnew(f(curr->content))))
+		{
 			ft_lstclear(&root, del);
+			ft_lstclear(&lst, del);
+			return (NULL);
+		}
 		if (!root)
 			root = new_node;
 		else

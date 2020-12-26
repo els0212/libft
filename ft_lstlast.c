@@ -6,7 +6,7 @@
 /*   By: hyi <hyi@student.42seoul.kr>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/26 21:28:09 by hyi               #+#    #+#             */
-/*   Updated: 2020/12/26 21:28:10 by hyi              ###   ########.fr       */
+/*   Updated: 2020/12/26 21:58:49 by hyi              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,8 @@ t_list	*ft_lstlast(t_list *lst)
 {
 	t_list	*ret;
 
+	if (!lst)
+		return (0);
 	ret = lst;
 	while (ret->next)
 	{

@@ -6,7 +6,7 @@
 /*   By: hyi <hyi@student.42seoul.kr>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/26 21:15:28 by hyi               #+#    #+#             */
-/*   Updated: 2020/12/26 21:15:39 by hyi              ###   ########.fr       */
+/*   Updated: 2020/12/26 22:07:25 by hyi              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,16 +15,13 @@
 void	ft_lstclear(t_list **lst, void (*del)(void *))
 {
 	t_list	*del_node;
-	t_list	*curr;
 
-	if (!lst || !del)
+	if (!lst)
 		return ;
-	curr = *lst;
-	while (curr)
+	while (*lst)
 	{
-		del_node = curr;
-		curr = curr->next;
-		del(del_node->content);
-		free(del_node);
+		del_node = *lst;
+		*lst = (*lst)->next;
+		ft_lstdelone(del_node, del);
 	}
 }
