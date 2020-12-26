@@ -6,7 +6,7 @@
 /*   By: hyi <hyi@student.42seoul.kr>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/21 10:50:30 by hyi               #+#    #+#             */
-/*   Updated: 2020/12/24 02:22:53 by hyi              ###   ########.fr       */
+/*   Updated: 2020/12/26 18:43:44 by hyi              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 		return ((char *)big);
 	else if (!big)
 		if (big[st])
-			;
+			st = 0;
 	while (st + lt_len <= len)
 	{
 		while (big[st] && big[st] != little[0])

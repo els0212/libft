@@ -6,12 +6,11 @@
 /*   By: hyi <hyi@student.42seoul.kr>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/21 10:42:22 by hyi               #+#    #+#             */
-/*   Updated: 2020/12/24 01:00:20 by hyi              ###   ########.fr       */
+/*   Updated: 2020/12/26 18:43:14 by hyi              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#define DIVISOR 10
 
 char	*ft_rev_str(char *n, int size)
 {

@@ -6,7 +6,7 @@
 /*   By: hyi <hyi@student.42seoul.kr>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/21 10:52:24 by hyi               #+#    #+#             */
-/*   Updated: 2020/12/26 00:08:29 by hyi              ###   ########.fr       */
+/*   Updated: 2020/12/26 18:43:21 by hyi              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ int	ft_make_int(const char *ptr, int st, int ed, int sign)
 	if (ret > 2147483647 && sign == 1)
 		return (-1);
 	else if (ret > 2147483648 && sign == -1)
-		return (-1);
+		return (0);
 	return (ret * sign);
 }
 
