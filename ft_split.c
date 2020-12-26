@@ -6,7 +6,7 @@
 /*   By: hyi <hyi@student.42seoul.kr>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/21 10:59:43 by hyi               #+#    #+#             */
-/*   Updated: 2020/12/26 20:36:22 by hyi              ###   ########.fr       */
+/*   Updated: 2020/12/26 22:27:31 by hyi              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,6 +38,16 @@ int		ft_cnt_lines(const char *s, char c)
 	return (cnt);
 }
 
+void	ft_free(char **ret, int ret_st)
+{
+	int	st;
+
+	st = 0;
+	while (st < ret_st)
+		free(ret[st]);
+	free(ret);
+}
+
 char	**ft_split(const char *s, char c)
 {
 	char	**ret;
@@ -54,7 +64,11 @@ char	**ft_split(const char *s, char c)
 		st++;
 	while (s[st] && ret_st < ft_cnt_lines(s, c))
 	{
-		ret[ret_st++] = ft_substr(s, st, ft_next_idx(s, c, st) - st);
+		if (!(ret[ret_st++] = ft_substr(s, st, ft_next_idx(s, c, st) - st)))
+		{
+			ft_free(ret, ret_st);
+			return (0);
+		};
 		st = ft_next_idx(s, c, st);
 		while (s[st] && s[st] == c)
 			st++;
