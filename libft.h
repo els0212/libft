@@ -6,7 +6,7 @@
 /*   By: hyi <hyi@student.42seoul.kr>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/21 11:11:51 by hyi               #+#    #+#             */
-/*   Updated: 2020/12/26 21:06:05 by hyi              ###   ########.fr       */
+/*   Updated: 2020/12/26 21:28:04 by hyi              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,8 @@ void				*ft_memcpy(void *dst, const void *src, size_t len);
 void				*ft_memset(void *dest, int c, size_t len);
 size_t				ft_strlcat(char *dst, const char *src, size_t size);
 size_t				ft_strlen(const char *s);
-char				*ft_strnstr(const char *big, const char *little, size_t len);
+char				*ft_strnstr(const char *big,
+		const char *little, size_t len);
 void				ft_bzero(void *b, size_t len);
 void				*ft_memccpy(void *dst, const void *src, int c, size_t len);
 int					ft_memcmp(const void *b1, const void *b2, size_t len);
@@ -66,5 +67,6 @@ void				ft_lstadd_back(t_list **lst, t_list *new);
 void				ft_lstdelone(t_list *lst, void (*del)(void *));
 void				ft_lstclear(t_list **lst, void (*del)(void *));
 void				ft_lstiter(t_list *lst, void (*f)(void *));
-t_list				*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
+t_list				*ft_lstmap(t_list *lst, void *(*f)(void *),
+		void (*del)(void *));
 #endif
