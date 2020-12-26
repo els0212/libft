@@ -6,7 +6,7 @@
 /*   By: hyi <hyi@student.42seoul.kr>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/21 11:11:51 by hyi               #+#    #+#             */
-/*   Updated: 2020/12/24 17:03:07 by hyi              ###   ########.fr       */
+/*   Updated: 2020/12/26 00:08:52 by hyi              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
 # include <unistd.h>
 # define DIVISOR 10
 
-long			ft_atoi(const char *nptr);
+int				ft_atoi(const char *nptr);
 int				ft_isalpha(int c);
 int				ft_isdigit(int c);
 int				ft_isalnum(int c);

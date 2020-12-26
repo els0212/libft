@@ -6,13 +6,13 @@
 /*   By: hyi <hyi@student.42seoul.kr>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/21 10:52:24 by hyi               #+#    #+#             */
-/*   Updated: 2020/12/21 18:41:39 by hyi              ###   ########.fr       */
+/*   Updated: 2020/12/26 00:08:29 by hyi              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-unsigned long	ft_make_long(const char *ptr, int st, int ed)
+int	ft_make_int(const char *ptr, int st, int ed, int sign)
 {
 	unsigned long	ret;
 	unsigned long	mod;
@@ -24,14 +24,18 @@ unsigned long	ft_make_long(const char *ptr, int st, int ed)
 		ret += ((unsigned long)(ptr[ed] - '0') * mod);
 		mod *= 10;
 	}
-	return (ret);
+	if (ret > 2147483647 && sign == 1)
+		return (-1);
+	else if (ret > 2147483648 && sign == -1)
+		return (-1);
+	return (ret * sign);
 }
 
-long			ft_atoi(const char *nptr)
+int	ft_atoi(const char *nptr)
 {
 	int		st;
 	int		ed;
-	long	sign;
+	int		sign;
 
 	sign = 1;
 	st = 0;
@@ -49,5 +53,5 @@ long			ft_atoi(const char *nptr)
 	ed = st;
 	while (nptr[ed] >= '0' && nptr[ed] <= '9')
 		ed++;
-	return (ft_make_long(nptr, st, ed) * sign);
+	return (ft_make_int(nptr, st, ed, sign));
 }
