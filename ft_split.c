@@ -6,7 +6,7 @@
 /*   By: hyi <hyi@student.42seoul.kr>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/21 10:59:43 by hyi               #+#    #+#             */
-/*   Updated: 2020/12/26 22:27:31 by hyi              ###   ########.fr       */
+/*   Updated: 2020/12/26 22:28:30 by hyi              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,7 +68,7 @@ char	**ft_split(const char *s, char c)
 		{
 			ft_free(ret, ret_st);
 			return (0);
-		};
+		}
 		st = ft_next_idx(s, c, st);
 		while (s[st] && s[st] == c)
 			st++;
